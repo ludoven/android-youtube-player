@@ -22,6 +22,7 @@ internal class ChromecastYouTubeMessageDispatcher(
       ChromecastCommunicationConstants.VIDEO_CURRENT_TIME -> bridge.sendVideoCurrentTime(messageFromReceiver.data)
       ChromecastCommunicationConstants.VIDEO_DURATION -> bridge.sendVideoDuration(messageFromReceiver.data)
       ChromecastCommunicationConstants.VIDEO_ID -> bridge.sendVideoId(messageFromReceiver.data)
+      ChromecastCommunicationConstants.SEND_VIDEO_QUALITY -> bridge.sendVideoQuality(messageFromReceiver.data)
     }
   }
 }

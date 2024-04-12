@@ -51,6 +51,7 @@ internal class PlaybackResumer : AbstractYouTubePlayerListener() {
     currentVideoId = videoId
   }
 
+
   fun onLifecycleResume() {
     canLoad = true
   }

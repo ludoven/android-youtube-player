@@ -49,6 +49,13 @@ private class YouTubePlayerImpl(private val webView: WebView) : YouTubePlayer {
   override fun toggleFullscreen() = webView.invoke("toggleFullscreen")
   override fun addListener(listener: YouTubePlayerListener) = listeners.add(listener)
   override fun removeListener(listener: YouTubePlayerListener) = listeners.remove(listener)
+  override fun setPlaybackQuality(quality: String) {
+    webView.invoke("setPlaybackQuality",quality)
+  }
+
+  override fun getPlaybackQuality() {
+    webView.invoke("sendVideoQuality")
+  }
 
   fun release() {
     listeners.clear()
@@ -116,6 +123,7 @@ internal class WebViewYouTubePlayer constructor(
       javaScriptEnabled = true
       mediaPlaybackRequiresUserGesture = false
       cacheMode = WebSettings.LOAD_DEFAULT
+      domStorageEnabled = true
     }
 
     addJavascriptInterface(YouTubePlayerBridge(this), "YouTubePlayerBridge")

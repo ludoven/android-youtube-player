@@ -19,6 +19,7 @@ internal object ChromecastCommunicationConstants {
   const val VIDEO_CURRENT_TIME = "VIDEO_CURRENT_TIME"
   const val VIDEO_DURATION = "VIDEO_DURATION"
   const val VIDEO_ID = "VIDEO_ID"
+  const val SEND_VIDEO_QUALITY = "SEND_VIDEO_QUALITY"
 
   // sender to receiver
   const val LOAD = "LOAD"
@@ -47,6 +48,7 @@ internal object ChromecastCommunicationConstants {
     VIDEO_CURRENT_TIME to VIDEO_CURRENT_TIME,
     VIDEO_DURATION to VIDEO_DURATION,
     VIDEO_ID to VIDEO_ID,
+    SEND_VIDEO_QUALITY to SEND_VIDEO_QUALITY,
 
     LOAD to LOAD,
     CUE to CUE,

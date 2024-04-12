@@ -61,4 +61,19 @@ interface YouTubePlayer {
 
   fun addListener(listener: YouTubePlayerListener): Boolean
   fun removeListener(listener: YouTubePlayerListener): Boolean
+
+
+  /**
+   * 更改播放质量
+   *
+   * @param quality ["hd1080","hd720","large","medium","small","tiny","auto"]
+   */
+  fun setPlaybackQuality(quality: String)
+
+  /**
+   * 获取可用的播放质量
+   *
+   * @return ["hd1080","hd720","large","medium","small","tiny","auto"]
+   */
+  fun getPlaybackQuality()
 }

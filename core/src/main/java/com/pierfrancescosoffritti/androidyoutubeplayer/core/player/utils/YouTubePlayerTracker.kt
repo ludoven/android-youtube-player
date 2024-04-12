@@ -36,4 +36,5 @@ class YouTubePlayerTracker : AbstractYouTubePlayerListener() {
   override fun onVideoId(youTubePlayer: YouTubePlayer, videoId: String) {
     this.videoId = videoId
   }
+
 }
